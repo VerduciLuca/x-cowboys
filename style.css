@@ -30,14 +30,14 @@ body {
     padding: 0px;
 }
 
-header{
+header {
     margin: 0;
     padding: 0;
     height: 100vh;
 }
 
-.rules1{
-    height:fit-content;
+.rules1 {
+    height: fit-content;
     background-color: #FFF8EA;
     display: flex;
     padding: 18px;
@@ -45,13 +45,13 @@ header{
     gap: 100px;
 }
 
-.classes{
+.classes {
     display: flex;
     width: 300px;
     /* background-color:#9E7676 ; */
     border-radius: 20px;
     padding: 10px;
-    color: #594545 ;
+    color: #594545;
     font-size: 18px;
     flex-direction: column;
     gap: 2px;
@@ -60,12 +60,12 @@ header{
     text-align: center;
 }
 
-h3{
+h3 {
     align-self: center;
     font-size: 30px;
 }
 
-.fun-card{
+.fun-card {
     background-color: #594545;
     color: #FFF8EA;
     align-self: center;
@@ -73,12 +73,57 @@ h3{
     border-radius: 18px;
     padding: 24px;
     height: 200px;
+    flex-direction: column;
+
+    justify-content: center;
+    transition: box-shadow 0.3s ease, font-style 0.5s ease;
 }
 
-.img1{
-    margin: 0px;
+.fun-card:hover{ 
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 22px 23px 5px rgba(0,0,0,0);
+    font-style: normal;
+}
+
+.img1 {
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    gap: 18px;
+    height: 100vh;
 }
+
+img {
+    --g: #0000, #000 .5deg 90deg, #0000 91deg;
+    --m:
+        conic-gradient(from 45deg, var(--g)) 20px 0 no-repeat,
+        conic-gradient(from 135deg, var(--g)) 0 20px no-repeat,
+        conic-gradient(from 225deg, var(--g)) -20px 0 no-repeat,
+        conic-gradient(from 315deg, var(--g)) 0 -20px no-repeat;
+    -webkit-mask: var(--m);
+    mask: var(--m);
+    transition: .3s linear;
+    filter: grayscale(.5);
+    cursor: pointer;
+}
+
+img:hover {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+    filter: grayscale(0.3);
+}
+
+.cards {
+    font-size: 50px;
+    font-style: normal;
+}
+
+.rules2 {
+    height: 100vh;
+    background-color: #FFF8EA;
+    display: flex;
+    padding: 18px;
+    flex-direction: row;
+    gap: 100px;
+}
+
